@@ -3,6 +3,11 @@ from markupsafe import escape
 
 app = Flask(__name__)
 
-@app.route("/<name>")
-def hello_world(name):
-    return f"Welcome, {escape(name)}"
+
+@app.route("/hello")
+def hello():
+    return "Hello World!"
+
+@app.route("/")
+def index():
+    return "Index Page"
